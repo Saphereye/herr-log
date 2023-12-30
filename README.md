@@ -2,14 +2,17 @@
 A single header lightweight logging library.
 
 ## Download
-Simply copy paste `herr-log.hh` into you directory and import it.
+Simply download the project and import `herrlog.hh`.
 
 ## Usage
 Herr Log supports the following log levels.
-- Error
-- Info
-- Trace
-- Debug
+| Log Level | Use Case |
+| --------- | -------- |
+| Error     | To report critical errors that require immediate attention and may result in program termination or malfunction. |
+| Info      | For reporting significant events, milestones, or key actions in the program's execution (e.g., program start, major processes). |
+| Trace     | To capture fine-grained details and trace specific actions, providing insights into the program's behavior (e.g., variable values, function calls). |
+| Debug     | Intended for temporary and detailed reporting during development or debugging phases to understand and analyze specific parts of the code. Use sparingly in production. |
+
 All these can be activated/deactivated independently.
 
 ### Basic usage
@@ -17,7 +20,7 @@ All these can be activated/deactivated independently.
 #include "herrlog.hh"
 
 int main() {
-    Logger::trace("This is trace message number 1");
+    Logger::trace("This is trace message number 1"); // Initialization is not required
 }
 ```
 
@@ -28,19 +31,30 @@ In place of log_file, any other stream can also be put.
 #include "herrlog.hh"
 
 int main() {
-    Logger::init(LogType::All, "test.log");
+    Logger::init(LogType::All, "test.log"); // The output will be redirected to "test.log"
     Logger::trace("This is trace message number 1");
 }
 ```
 
 ### Custom output message types
-For example, only error and info message are needed.
+For example, if only error and info messages are needed.
 
 ```cpp
 #include "herrlog.hh"
 
 int main() {
+    Logger::init(LogType::Error || LogType::Info, "test.log");
+    Logger::error("Erroneous error"); // This will be printed
+    Logger::trace("Tracing something"); // This wouldn't be printed
+}
+```
+
+### Inbuilt formatting
+```cpp
+#include "herrlog.hh"
+
+int main() {
     Logger::init(LogType::All, "test.log");
-    Logger::trace("This is {} message number {}", "trace", 1);
+    Logger::trace("This is {} message number {}", "trace", 1); // Will be printed as "This is trace message number 1"
 }
 ```
