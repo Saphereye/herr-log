@@ -2,7 +2,10 @@
 A single header lightweight logging library.
 
 ## Download
-Simply download the project and import `herrlog.hh`.
+Simply download the project and import `herrlog.hh`. Or run the below given curl command in your directory.
+```bash
+curl -o herrlog.hh -L https://raw.githubusercontent.com/Saphereye/herr-log/main/herrlog.hh
+```
 
 ## Usage
 Herr Log supports the following log levels.
