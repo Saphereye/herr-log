@@ -2,11 +2,10 @@
  * @file herrlog.hh
  * @author Saphereye
  * @brief Header file only logging library
- * @version 0.4
+ * @version 0.5
  * @date 2023-12-30
  *
  * @copyright Copyright (c) 2023
- *
  */
 
 #pragma once
@@ -15,6 +14,7 @@
 #include <fstream>
 #include <iostream>
 #include <ostream>
+#include <mutex>
 
 /**
  * @brief Set of ANSI colors, more can be found here:
@@ -80,6 +80,7 @@ class Logger {
     static std::ofstream output_file;
     static bool is_output_to_console;
     static const char* datetime_format;
+    static std::mutex log_mutex;
 
     /**
      * @brief A recursive function to print the templated arguments passed
@@ -134,6 +135,7 @@ class Logger {
         std::strftime(time_string, sizeof(time_string), datetime_format,
                       std::localtime(&current_time));
 
+        std::lock_guard<std::mutex> lock(Logger::log_mutex);
         if (is_output_to_console) {
             std::cout << color << "[" << name << " " << time_string << "]"
                       << RESET_COLOR << " ";
@@ -151,7 +153,7 @@ class Logger {
      * opened. BUG: The destructor is never called.
      */
     ~Logger() {
-        std::cout << Logger::is_output_to_console << std::endl;
+        std::cout << "Yo" << std::endl;
         if (!is_output_to_console) {
             output_file.close();
         }
@@ -304,3 +306,4 @@ std::string Logger::output_file_name = std::string();
 std::ofstream Logger::output_file;
 bool Logger::is_output_to_console = true;
 const char* Logger::datetime_format = "%Y-%m-%d %H:%M:%S";
+std::mutex Logger::log_mutex;
