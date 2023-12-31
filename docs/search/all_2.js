@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['herr_20log_2',['Herr Log',['../index.html',1,'']]],
-  ['herrlog_2ehh_3',['herrlog.hh',['../herrlog_8hh.html',1,'']]]
+  ['fatal_2',['fatal',['../classLogger.html#a7ece40aad10c27b720d334f375f04680',1,'Logger']]]
 ];

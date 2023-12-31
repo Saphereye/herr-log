@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Header file only loggin library.  
+<p>Header file only logging library.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;chrono&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
@@ -96,31 +96,40 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ad7c3b975e5552a122f836b02fa138502"><td class="memItemLeft" align="right" valign="top"><a id="ad7c3b975e5552a122f836b02fa138502"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>RESET_COLOR</b>&#160;&#160;&#160;&quot;\033[0m&quot;</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="herrlog_8hh.html#ad7c3b975e5552a122f836b02fa138502">RESET_COLOR</a>&#160;&#160;&#160;&quot;\033[0m&quot;</td></tr>
+<tr class="memdesc:ad7c3b975e5552a122f836b02fa138502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set of ANSI colors, more can be found here: <a href="https://gist.github.com/JBlond/2fea43a3049b38287e5e9cefc87b2124">https://gist.github.com/JBlond/2fea43a3049b38287e5e9cefc87b2124</a>. <br /></td></tr>
 <tr class="separator:ad7c3b975e5552a122f836b02fa138502"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a683cdc96b34c5ddea1306e8e9f9ec438"><td class="memItemLeft" align="right" valign="top"><a id="a683cdc96b34c5ddea1306e8e9f9ec438"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>RED_COLOR</b>&#160;&#160;&#160;&quot;\033[1;31m&quot;</td></tr>
-<tr class="separator:a683cdc96b34c5ddea1306e8e9f9ec438"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4bdeb73d33895bb745d17b3d8539a6a"><td class="memItemLeft" align="right" valign="top"><a id="ac4bdeb73d33895bb745d17b3d8539a6a"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>GREEN_COLOR</b>&#160;&#160;&#160;&quot;\033[1;32m&quot;</td></tr>
-<tr class="separator:ac4bdeb73d33895bb745d17b3d8539a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a34f2f8dca5dd35f23c60054b18887"><td class="memItemLeft" align="right" valign="top"><a id="a35a34f2f8dca5dd35f23c60054b18887"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>YELLOW_COLOR</b>&#160;&#160;&#160;&quot;\033[1;33m&quot;</td></tr>
-<tr class="separator:a35a34f2f8dca5dd35f23c60054b18887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b34b50ba4e25c630328a194f773372b"><td class="memItemLeft" align="right" valign="top"><a id="a3b34b50ba4e25c630328a194f773372b"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>BLUE_COLOR</b>&#160;&#160;&#160;&quot;\033[1;34m&quot;</td></tr>
-<tr class="separator:a3b34b50ba4e25c630328a194f773372b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa701db39791f55f2541a3b28822a094d"><td class="memItemLeft" align="right" valign="top"><a id="aa701db39791f55f2541a3b28822a094d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BOLD_RED_COLOR</b>&#160;&#160;&#160;&quot;\033[1;31m&quot;</td></tr>
+<tr class="separator:aa701db39791f55f2541a3b28822a094d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b144bafcebbd1f5fb598f51b7d9f66"><td class="memItemLeft" align="right" valign="top"><a id="ac0b144bafcebbd1f5fb598f51b7d9f66"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BOLD_GREEN_COLOR</b>&#160;&#160;&#160;&quot;\033[1;32m&quot;</td></tr>
+<tr class="separator:ac0b144bafcebbd1f5fb598f51b7d9f66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dcab4f40539d8f429751f02708f56e7"><td class="memItemLeft" align="right" valign="top"><a id="a2dcab4f40539d8f429751f02708f56e7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BOLD_YELLOW_COLOR</b>&#160;&#160;&#160;&quot;\033[1;33m&quot;</td></tr>
+<tr class="separator:a2dcab4f40539d8f429751f02708f56e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab83002d6521abe2db3a361d268af0deb"><td class="memItemLeft" align="right" valign="top"><a id="ab83002d6521abe2db3a361d268af0deb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BOLD_BLUE_COLOR</b>&#160;&#160;&#160;&quot;\033[1;34m&quot;</td></tr>
+<tr class="separator:ab83002d6521abe2db3a361d268af0deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ee36d59839d36df96eebf0f48cbfe6b"><td class="memItemLeft" align="right" valign="top"><a id="a9ee36d59839d36df96eebf0f48cbfe6b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BACKGROUND_RED_COLOR</b>&#160;&#160;&#160;&quot;\033[41m&quot;</td></tr>
+<tr class="separator:a9ee36d59839d36df96eebf0f48cbfe6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2deab882d93b4e522a1c071e87e65a3"><td class="memItemLeft" align="right" valign="top"><a id="ab2deab882d93b4e522a1c071e87e65a3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>BOLD_WHITE_COLOR</b>&#160;&#160;&#160;&quot;\033[1;37m&quot;</td></tr>
+<tr class="separator:ab2deab882d93b4e522a1c071e87e65a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a2a4e93ddf37410ac3617894358f19bc6"><td class="memItemLeft" align="right" valign="top"><a id="a2a4e93ddf37410ac3617894358f19bc6"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="herrlog_8hh.html#a2a4e93ddf37410ac3617894358f19bc6">LogType</a> : std::uint8_t { <br />
-&#160;&#160;<b>Trace</b> = 0b0001
-, <b>Debug</b> = 0b0010
-, <b>Info</b> = 0b0100
-, <b>Error</b> = 0b1000
+&#160;&#160;<b>Trace</b> = 0b000001
+, <b>Debug</b> = 0b000010
+, <b>Info</b> = 0b000100
+, <b>Error</b> = 0b001000
 , <br />
-&#160;&#160;<b>All</b> = 0b1111
-, <b>None</b> = 0b0000
+&#160;&#160;<b>Warn</b> = 0b010000
+, <b>Fatal</b> = 0b100000
+, <b>All</b> = 0b111111
+, <b>None</b> = 0b000000
 <br />
  }</td></tr>
 <tr class="memdesc:a2a4e93ddf37410ac3617894358f19bc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum defining different log types as bit flags. <br /></td></tr>
@@ -136,9 +145,9 @@ Functions</h2></td></tr>
 <tr class="separator:a55673a33699dd551e1ded6c0f614bd16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file only loggin library. </p>
+<div class="textblock"><p>Header file only logging library. </p>
 <dl class="section author"><dt>Author</dt><dd>Saphereye </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>0.3 </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.4 </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2023-12-30</dd></dl>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2023 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>

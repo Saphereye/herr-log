@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['info_15',['info',['../classLogger.html#a1853eebd8acf02e28404907dbe8ac920',1,'Logger']]],
-  ['init_16',['init',['../classLogger.html#a49696d24eda7b865e7d5a6b5d794f838',1,'Logger']]]
+  ['fatal_20',['fatal',['../classLogger.html#a7ece40aad10c27b720d334f375f04680',1,'Logger']]]
 ];
