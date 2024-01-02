@@ -78,7 +78,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a673b98ac5fd0eeaf37c3ff7400ed5fe6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a673b98ac5fd0eeaf37c3ff7400ed5fe6">set_type</a> (<a class="el" href="herrlog_8hh.html#a2a4e93ddf37410ac3617894358f19bc6">LogType</a> log_type)</td></tr>
+<tr class="memitem:a673b98ac5fd0eeaf37c3ff7400ed5fe6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a673b98ac5fd0eeaf37c3ff7400ed5fe6">set_type</a> (<a class="el" href="classLogType.html">LogType</a> log_type)</td></tr>
 <tr class="memdesc:a673b98ac5fd0eeaf37c3ff7400ed5fe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the log type, default is LogType::All.  <a href="classLogger.html#a673b98ac5fd0eeaf37c3ff7400ed5fe6">More...</a><br /></td></tr>
 <tr class="separator:a673b98ac5fd0eeaf37c3ff7400ed5fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afaeafb26a183a7b78f5db534c40a4ad0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#afaeafb26a183a7b78f5db534c40a4ad0">set_output_file_name</a> (std::string output_file_name)</td></tr>
@@ -87,6 +87,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a96d4a4378b54f6dcf671e3523dad5318"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a96d4a4378b54f6dcf671e3523dad5318">set_datetime_format</a> (const char *datetime_format)</td></tr>
 <tr class="memdesc:a96d4a4378b54f6dcf671e3523dad5318"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the datetime format object, default is "%Y-%m-%d %H:%M:%S".  <a href="classLogger.html#a96d4a4378b54f6dcf671e3523dad5318">More...</a><br /></td></tr>
 <tr class="separator:a96d4a4378b54f6dcf671e3523dad5318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb7a3549d53599184f6898e3180e5c1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#aacb7a3549d53599184f6898e3180e5c1">set_output_buffer</a> (std::ostream &amp;output_buffer)</td></tr>
+<tr class="memdesc:aacb7a3549d53599184f6898e3180e5c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the output buffer object.  <a href="classLogger.html#aacb7a3549d53599184f6898e3180e5c1">More...</a><br /></td></tr>
+<tr class="separator:aacb7a3549d53599184f6898e3180e5c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03e74e76ce61704a36eca422ec0f75a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLogger.html#a03e74e76ce61704a36eca422ec0f75a7">set_is_color_output</a> (bool is_color_output)</td></tr>
+<tr class="memdesc:a03e74e76ce61704a36eca422ec0f75a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the is color output object.  <a href="classLogger.html#a03e74e76ce61704a36eca422ec0f75a7">More...</a><br /></td></tr>
+<tr class="separator:a03e74e76ce61704a36eca422ec0f75a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e1727a15549295c7bc0f717f13237f0"><td class="memTemplParams" colspan="2">template&lt;typename... Args&gt; </td></tr>
 <tr class="memitem:a3e1727a15549295c7bc0f717f13237f0"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classLogger.html#a3e1727a15549295c7bc0f717f13237f0">trace</a> (const char *format, Args... args)</td></tr>
 <tr class="memdesc:a3e1727a15549295c7bc0f717f13237f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs messages of type trace.  <a href="classLogger.html#a3e1727a15549295c7bc0f717f13237f0">More...</a><br /></td></tr>
@@ -367,6 +373,74 @@ template&lt;typename... Args&gt; </div>
 
 </div>
 </div>
+<a id="a03e74e76ce61704a36eca422ec0f75a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03e74e76ce61704a36eca422ec0f75a7">&#9670;&nbsp;</a></span>set_is_color_output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Logger::set_is_color_output </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_color_output</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the is color output object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_color_output</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aacb7a3549d53599184f6898e3180e5c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb7a3549d53599184f6898e3180e5c1">&#9670;&nbsp;</a></span>set_output_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Logger::set_output_buffer </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>output_buffer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the output buffer object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">output_buffer</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="afaeafb26a183a7b78f5db534c40a4ad0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afaeafb26a183a7b78f5db534c40a4ad0">&#9670;&nbsp;</a></span>set_output_file_name()</h2>
 
@@ -413,7 +487,7 @@ template&lt;typename... Args&gt; </div>
         <tr>
           <td class="memname">static void Logger::set_type </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="herrlog_8hh.html#a2a4e93ddf37410ac3617894358f19bc6">LogType</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="classLogType.html">LogType</a>&#160;</td>
           <td class="paramname"><em>log_type</em></td><td>)</td>
           <td></td>
         </tr>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['info_5',['info',['../classLogger.html#a1853eebd8acf02e28404907dbe8ac920',1,'Logger']]]
+  ['herr_20log_4',['Herr Log',['../index.html',1,'']]],
+  ['herrlog_2ehh_5',['herrlog.hh',['../herrlog_8hh.html',1,'']]]
 ];

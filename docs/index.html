@@ -97,7 +97,7 @@ Basic usage</h2>
 <div class="line"><span class="keywordtype">int</span> main() {</div>
 <div class="line">    <a class="code" href="classLogger.html#a3e1727a15549295c7bc0f717f13237f0">Logger::trace</a>(<span class="stringliteral">&quot;This is trace message number 1&quot;</span>); <span class="comment">// Initialization is not required</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassLogger_html_a3e1727a15549295c7bc0f717f13237f0"><div class="ttname"><a href="classLogger.html#a3e1727a15549295c7bc0f717f13237f0">Logger::trace</a></div><div class="ttdeci">static void trace(const char *format, Args... args)</div><div class="ttdoc">Logs messages of type trace.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:210</div></div>
+<div class="ttc" id="aclassLogger_html_a3e1727a15549295c7bc0f717f13237f0"><div class="ttname"><a href="classLogger.html#a3e1727a15549295c7bc0f717f13237f0">Logger::trace</a></div><div class="ttdeci">static void trace(const char *format, Args... args)</div><div class="ttdoc">Logs messages of type trace.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:277</div></div>
 <div class="ttc" id="aherrlog_8hh_html"><div class="ttname"><a href="herrlog_8hh.html">herrlog.hh</a></div><div class="ttdoc">Header file only logging library.</div></div>
 </div><!-- fragment --><p> By default, the style is <code>LogStyle::All</code>, i.e. all log types are enabled. The output is directed to the console using anse colors and the datetime format is "%Y-%m-%d %H:%M:%S".</p>
 <h2><a class="anchor" id="autotoc_md4"></a>
@@ -109,7 +109,7 @@ Custom output stream (e.g. logfiles)</h2>
 <div class="line">    <a class="code" href="classLogger.html#afaeafb26a183a7b78f5db534c40a4ad0">Logger::set_output_file_name</a>(<span class="stringliteral">&quot;test.log&quot;</span>); <span class="comment">// The output will be redirected to &quot;test.log&quot;</span></div>
 <div class="line">    <a class="code" href="classLogger.html#a3e1727a15549295c7bc0f717f13237f0">Logger::trace</a>(<span class="stringliteral">&quot;This is trace message number 1&quot;</span>);</div>
 <div class="line">}</div>
-<div class="ttc" id="aclassLogger_html_afaeafb26a183a7b78f5db534c40a4ad0"><div class="ttname"><a href="classLogger.html#afaeafb26a183a7b78f5db534c40a4ad0">Logger::set_output_file_name</a></div><div class="ttdeci">static void set_output_file_name(std::string output_file_name)</div><div class="ttdoc">Set the output file name object.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:181</div></div>
+<div class="ttc" id="aclassLogger_html_afaeafb26a183a7b78f5db534c40a4ad0"><div class="ttname"><a href="classLogger.html#afaeafb26a183a7b78f5db534c40a4ad0">Logger::set_output_file_name</a></div><div class="ttdeci">static void set_output_file_name(std::string output_file_name)</div><div class="ttdoc">Set the output file name object.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:222</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
 Custom output message types</h2>
 <p>For example, if only error and info messages are needed.</p>
@@ -121,8 +121,8 @@ Custom output message types</h2>
 <div class="line">    <a class="code" href="classLogger.html#a53c9b42bfce4d2314724807e33a56a15">Logger::error</a>(<span class="stringliteral">&quot;Erroneous error&quot;</span>); <span class="comment">// This will be printed</span></div>
 <div class="line">    <a class="code" href="classLogger.html#a3e1727a15549295c7bc0f717f13237f0">Logger::trace</a>(<span class="stringliteral">&quot;Tracing something&quot;</span>); <span class="comment">// This wouldn&#39;t be printed</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassLogger_html_a53c9b42bfce4d2314724807e33a56a15"><div class="ttname"><a href="classLogger.html#a53c9b42bfce4d2314724807e33a56a15">Logger::error</a></div><div class="ttdeci">static void error(const char *format, Args... args)</div><div class="ttdoc">Logs messages of type error. Furthermore closes the output file and exits the program.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:259</div></div>
-<div class="ttc" id="aclassLogger_html_a673b98ac5fd0eeaf37c3ff7400ed5fe6"><div class="ttname"><a href="classLogger.html#a673b98ac5fd0eeaf37c3ff7400ed5fe6">Logger::set_type</a></div><div class="ttdeci">static void set_type(LogType log_type)</div><div class="ttdoc">Sets the log type, default is LogType::All.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:174</div></div>
+<div class="ttc" id="aclassLogger_html_a53c9b42bfce4d2314724807e33a56a15"><div class="ttname"><a href="classLogger.html#a53c9b42bfce4d2314724807e33a56a15">Logger::error</a></div><div class="ttdeci">static void error(const char *format, Args... args)</div><div class="ttdoc">Logs messages of type error. Furthermore closes the output file and exits the program.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:327</div></div>
+<div class="ttc" id="aclassLogger_html_a673b98ac5fd0eeaf37c3ff7400ed5fe6"><div class="ttname"><a href="classLogger.html#a673b98ac5fd0eeaf37c3ff7400ed5fe6">Logger::set_type</a></div><div class="ttdeci">static void set_type(LogType log_type)</div><div class="ttdoc">Sets the log type, default is LogType::All.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:215</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md6"></a>
 Inbuilt formatting</h2>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="herrlog_8hh.html">herrlog.hh</a>&quot;</span></div>
@@ -138,7 +138,7 @@ Custom datetime format</h2>
 <div class="line">    <a class="code" href="classLogger.html#a96d4a4378b54f6dcf671e3523dad5318">Logger::set_datetime_format</a>(<span class="stringliteral">&quot;%H:%M:%S&quot;</span>);</div>
 <div class="line">    <a class="code" href="classLogger.html#a3e1727a15549295c7bc0f717f13237f0">Logger::trace</a>(<span class="stringliteral">&quot;Hello World&quot;</span>); <span class="comment">// Will be printed as &quot;[TRACE 12:35:24] Hello World&quot;</span></div>
 <div class="line">}</div>
-<div class="ttc" id="aclassLogger_html_a96d4a4378b54f6dcf671e3523dad5318"><div class="ttname"><a href="classLogger.html#a96d4a4378b54f6dcf671e3523dad5318">Logger::set_datetime_format</a></div><div class="ttdeci">static void set_datetime_format(const char *datetime_format)</div><div class="ttdoc">Set the datetime format object, default is &quot;%Y-%m-%d %H:%M:%S&quot;.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:196</div></div>
+<div class="ttc" id="aclassLogger_html_a96d4a4378b54f6dcf671e3523dad5318"><div class="ttname"><a href="classLogger.html#a96d4a4378b54f6dcf671e3523dad5318">Logger::set_datetime_format</a></div><div class="ttdeci">static void set_datetime_format(const char *datetime_format)</div><div class="ttdoc">Set the datetime format object, default is &quot;%Y-%m-%d %H:%M:%S&quot;.</div><div class="ttdef"><b>Definition:</b> herrlog.hh:245</div></div>
 </div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

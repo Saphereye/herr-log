@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['set_5fdatetime_5fformat_24',['set_datetime_format',['../classLogger.html#a96d4a4378b54f6dcf671e3523dad5318',1,'Logger']]],
-  ['set_5foutput_5ffile_5fname_25',['set_output_file_name',['../classLogger.html#afaeafb26a183a7b78f5db534c40a4ad0',1,'Logger']]],
-  ['set_5ftype_26',['set_type',['../classLogger.html#a673b98ac5fd0eeaf37c3ff7400ed5fe6',1,'Logger']]]
+  ['operator_26_27',['operator&amp;',['../classLogType.html#af04cbbe99f1b9ae1a28d80d01f1d89b7',1,'LogType']]],
+  ['operator_7c_28',['operator|',['../classLogType.html#a635be821591dc45fbdd0a3130b74149e',1,'LogType']]]
 ];
